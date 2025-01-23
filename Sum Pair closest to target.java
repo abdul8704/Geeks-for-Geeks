@@ -20,6 +20,10 @@
 // 0 <= target<= 2*105
 // 0 <= arr[i] <= 105
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 class Solution {
     public List<Integer> sumClosest(int[] arr, int target) {
         Arrays.sort(arr);
