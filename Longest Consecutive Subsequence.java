@@ -18,6 +18,9 @@
 // 1 <= arr.size() <= 105
 // 0 <= arr[i] <= 105
 
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
     // Function to return length of longest subsequence of consecutive integers.
     public int longestConsecutive(int[] arr) {
