@@ -20,6 +20,7 @@
 // -103 ≤ arr[i] ≤ 103
 // -107 ≤ k ≤ 107
 
+import java.util.HashMap;
 
 class Solution {
     public int countSubarrays(int arr[], int k) {
