@@ -1,5 +1,4 @@
 // Given an array of positive integers. Find the maximum sum of strictly increasing subarrays.
-Find Maximum Sum Strictly Increasing Subarray
 // Example 1:
 
 // Input : 
