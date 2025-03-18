@@ -18,6 +18,8 @@
 // 1 ≤ arr.size() ≤ 106
 // −103 ≤ arr[i] ≤ 103, for each valid i
 
+import java.util.HashMap;
+
 class Solution {
     int maxLen(int arr[]) {
        HashMap<Integer, Integer> hash = new HashMap<>();
