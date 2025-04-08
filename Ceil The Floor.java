@@ -52,3 +52,29 @@ class Solution {
             return (left < N) ? arr[left] : -1;
     }
 }
+
+class Solution2 {
+    public int[] getFloorAndCeil(int x, int[] arr) {
+        int res[] = new int[2];
+        res[1] = Integer.MAX_VALUE;
+        res[0] = Integer.MIN_VALUE;
+        
+        for(int num: arr){
+            if(num == x){
+                res[0] = x; res[1] = x;
+                return res;
+            }
+            else if(num > x && num < res[1]){
+                res[1] = num;
+            }
+            else if(num < x && num > res[0]){
+                res[0] = num;
+            }
+        }
+        
+        res[0] = (res[0] != Integer.MIN_VALUE)? res[0]: -1;
+        res[1] = (res[1] != Integer.MAX_VALUE)? res[1]: -1;
+        
+        return res;
+    }
+}
