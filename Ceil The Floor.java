@@ -21,6 +21,8 @@
 // 1 ≤ arr.size ≤ 105
 // 1 ≤ arr[i], x ≤ 106
 
+import java.util.Arrays;
+
 class Solution {
     public int[] getFloorAndCeil(int x, int[] arr) {
         Arrays.sort(arr);
