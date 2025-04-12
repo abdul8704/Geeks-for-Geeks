@@ -15,6 +15,8 @@
 // 1 ≤ intervals.size() ≤  105
 // 0 ≤ start[i], end[i] ≤ 109
 
+import java.util.ArrayList;
+
 class Solution {
     static ArrayList<int[]> insertInterval(int[][] intervals, int[] newInterval) {
         ArrayList<int[]> res = new ArrayList<>();
