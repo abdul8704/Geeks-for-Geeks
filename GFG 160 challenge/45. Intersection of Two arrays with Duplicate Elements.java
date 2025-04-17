@@ -20,7 +20,9 @@
 // 1 ≤ a.size(), b.size() ≤ 105
 // 1 ≤ a[i], b[i] ≤ 105
 
-
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 class Solution {
     public ArrayList<Integer> intersectionWithDuplicates(int[] a, int[] b) {
