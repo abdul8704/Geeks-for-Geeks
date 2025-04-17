@@ -45,3 +45,39 @@ class Solution {
         return;
     }
 }
+class Solution2 {
+    // gap method
+    public void mergeArrays(int a[], int b[]) {
+        int N = a.length, M = b.length;
+        int gap = (int) Math.ceil((N+M) / 2.0);
+        
+        while(gap > 0){
+            int left = 0, right = left + gap;
+            while (right < N+M){
+                if(left < N && right >= N){
+                    if(a[left] > b[right - N])
+                        swap(a, b, left, right-N);
+                }
+                else if(right < N){
+                    if(a[left] > a[right]){
+                        swap(a, a, left, right);
+                    }
+                }
+                else{
+                    if(b[left - N] > b[right-N]){
+                        swap(b, b, left-N, right-N);
+                    }
+                }
+                left++; right++;
+            }
+            if(gap == 1) break;
+            gap = (int) Math.ceil(gap/2.0);
+        }
+    }
+    private static void swap(int a[], int b[], int i, int j){
+        int temp = a[i];
+        a[i] = b[j];
+        b[j] = temp;
+        return;
+    }
+}    
