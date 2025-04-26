@@ -18,6 +18,7 @@
 // 0 ≤ arr[i] ≤105
 // 0 ≤ k ≤ 105
 
+import java.util.HashMap;
 
 class Solution {
     public long subarrayXor(int arr[], int k) {
