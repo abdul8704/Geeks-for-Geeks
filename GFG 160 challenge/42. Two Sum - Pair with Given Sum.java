@@ -18,7 +18,8 @@
 // 1 ≤ arr[i] ≤ 105
 // 1 ≤ target ≤ 2*105
 
-
+import java.util.HashMap;
+import java.util.Map;
 
 class Solution {
     boolean twoSum(int arr[], int target) {
