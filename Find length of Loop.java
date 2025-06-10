@@ -27,7 +27,6 @@ class Node{
     Node(int d) {data = d; next = null; }
 }
 
-
 class Solution {
     private static Node findIntersection(Node head){
         Node fast = head, slow = head;
@@ -41,28 +40,16 @@ class Solution {
         }
         return null;
     }
-    private static Node findStart(Node head, Node inter){
-        
-        while(head != inter){
-            head = head.next;
-            inter = inter.next;
-        }
-        
-        return head;
-    }
     public int countNodesinLoop(Node head) {
         if(head == null || head.next == null) return 0;
         
         Node intersect = findIntersection(head);
-        
         if(intersect == null) return 0;
         
-        Node start = findStart(head, intersect);
-        
-        Node temp = start.next;
+        Node temp = intersect.next;
         int dist = 1;
         
-        while(temp != start){
+        while(temp != intersect){
             temp = temp.next;
             dist++;
         }
