@@ -57,4 +57,35 @@ class Solution {
         return head;
         
     }
+    static Node segregate2(Node head) {
+        Node c0 = new Node(0), c1 = new Node(0), c2 = new Node(0);
+        Node p0 = c0, p1 = c1, p2 = c2;
+        
+        Node ptr = head;
+        
+        while(ptr != null){
+            if(ptr.data == 0){
+                c0.next = ptr;
+                c0 = c0.next;
+            } 
+            else if(ptr.data == 1){
+                c1.next = ptr;
+                c1 = c1.next;
+            }
+            else{
+                c2.next = ptr;
+                c2 = c2.next;
+            }
+            
+            ptr = ptr.next;
+        }
+    
+        c0.next = (p1.next != null)? p1.next: p2.next;
+        c1.next = (p2.next != null)? p2.next: null;
+        c2.next = null;
+        
+        head = p0.next;
+        
+        return head;        
+    }
 }
