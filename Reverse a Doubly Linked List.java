@@ -52,3 +52,19 @@ class Solution {
         return ptr;
     }
 }
+
+class RecursiveSolution {
+    public DLLNode reverseDLL(DLLNode head) {
+        if(head == null)
+            return head;
+        
+        DLLNode front = head.next;    
+        head.next = head.prev;
+        head.prev = front;
+        
+        if(front == null)
+            return head;
+        
+        return reverseDLL(head.prev);    
+    }
+}
