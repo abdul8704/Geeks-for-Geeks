@@ -18,6 +18,8 @@
 // Constraints:
 // 1<=N<=100
 
+import java.util.Stack;
+
 class GfG {
     public Stack<Integer> sort(Stack<Integer> s) {
         return helper(s);
